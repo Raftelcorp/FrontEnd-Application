@@ -3,7 +3,7 @@
       { "id": 1, "title": "Evento1", "author": "organizacion1" , "date":"12/25", "price":"20"},
       { "id": 2, "title": "Evento2", "author": "RaftelCorp" , "date":"10/19", "price":"50"},
       { "id": 3, "title": "Comicon", "author": "comicon inc" , "date":"09/10", "price":"120"},
-      { "id": 4, "title": "Concierto", "author": " " , "date":"08/12", "price":"250"}
+      { "id": 4, "title": "Concierto", "author": "x" , "date":"08/12", "price":"250"}
     ]
     
 }
