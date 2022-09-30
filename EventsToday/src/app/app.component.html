@@ -1,1 +1,16 @@
-<app-password-change></app-password-change>
+<button routerLink="register.event" mat-button>Register</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above"> </mat-menu>
+
+<button routerLink="" mat-button>Events</button>
+<mat-menu #belowMenu="matMenu" yPosition="below"> </mat-menu>
+
+<button routerLink="published.event" mat-button>Published</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before"> </mat-menu>
+
+<button routerLink="password.change" mat-button>Password</button>
+<mat-menu #afterMenu="matMenu" xPosition="after"> </mat-menu>
+
+<button routerLink="account.recovery" mat-button>Recovery</button>
+<mat-menu #afterMenu="matMenu" xPosition="after"> </mat-menu>
+
+<router-outlet></router-outlet>
