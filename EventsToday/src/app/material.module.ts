@@ -6,6 +6,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDividerModule} from '@angular/material/divider';
 import { MatInputModule }  from '@angular/material/input';
 
+import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+
 
 
 @NgModule({
@@ -16,7 +19,9 @@ import { MatInputModule }  from '@angular/material/input';
     MatButtonModule,
     MatIconModule,
     MatDividerModule,
-    MatInputModule
+    MatInputModule,
+    MatTableModule,
+    MatCardModule
 ]
  
 })

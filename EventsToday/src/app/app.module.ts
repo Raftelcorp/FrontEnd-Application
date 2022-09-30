@@ -8,6 +8,7 @@ import { MaterialModule } from './material.module';
 import { AccountRecoveryComponent } from './components/account-recovery/account-recovery.component';
 import { PasswordChangeComponent } from './components/password-change/password-change.component';
 
+
 import {MaterialExampleModule} from '../material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
