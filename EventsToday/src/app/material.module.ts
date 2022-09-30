@@ -9,8 +9,6 @@ import { MatInputModule }  from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
 
-
-
 @NgModule({
   declarations: [ ],
   imports: [],
@@ -21,7 +19,7 @@ import { MatCardModule } from '@angular/material/card';
     MatDividerModule,
     MatInputModule,
     MatTableModule,
-    MatCardModule
+    MatCardModule,
 ]
  
 })

@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { AccountRecoveryComponent } from './components/account-recovery/account-recovery.component';
 import { PasswordChangeComponent } from './components/password-change/password-change.component';
-
+import { LoginComponent } from './components/login/login.component';
 
 import {MaterialExampleModule} from '../material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -26,7 +26,8 @@ import { EventComponent } from './components/event/event.component'
     AccountRecoveryComponent,
     PasswordChangeComponent,
     RegisterEventComponent,
-    EventComponent
+    EventComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
