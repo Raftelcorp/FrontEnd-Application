@@ -14,7 +14,7 @@ export class EventComponent implements OnInit {
   ngOnInit(): void {
     this.Getallusers();
   }
-  displayedColumns: string[] = ['title', 'author', 'date', 'price'];
+  displayedColumns: string[] = ['title', 'author', 'date', 'price','image'];
 
 
   userdata:any;
