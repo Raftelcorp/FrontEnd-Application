@@ -1,0 +1,64 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Evento1",
+      "author": "organizacion1",
+      "startDate": "08/12",
+      "endDate": "08/12",
+      "description": "xd",
+      "price": "20",
+      "urlImg": "https://cdn.discordapp.com/attachments/959280112279379968/1030975610295689216/unknown.png"
+    },
+    {
+      "id": 2,
+      "title": "Evento2",
+      "author": "RaftelCorp",
+      "startDate": "08/12",
+      "endDate": "08/12",
+      "description": "xd",
+      "price": "50",
+      "urlImg": "https://cdn.discordapp.com/attachments/959280112279379968/1030976032146194482/unknown.png"
+    },
+    {
+      "id": 3,
+      "title": "Comicon",
+      "author": "comicon inc",
+      "startDate": "08/12",
+      "endDate": "08/12",
+      "description": "xd",
+      "price": "120",
+      "urlImg": "https://cdn.discordapp.com/attachments/959280112279379968/1030975929356402688/unknown.png"
+    },
+    {
+      "id": 4,
+      "title": "Concierto",
+      "author": " ",
+      "startDate": "08/12",
+      "endDate": "08/12",
+      "description": "xd",
+      "price": "250",
+      "urlImg": "https://cdn.discordapp.com/attachments/959280112279379968/1030975765585592320/unknown.png"
+    },
+    {
+      "title": "aaaa",
+      "startDate": "2022-10-09T05:00:00.000Z",
+      "endDate": "2022-10-13T05:00:00.000Z",
+      "price": "23",
+      "description": "xd",
+      "author": "",
+      "urlToImage": "",
+      "id": 5
+    },
+    {
+      "title": "xa",
+      "startDate": "2022-10-10T05:00:00.000Z",
+      "endDate": "2023-01-13T05:00:00.000Z",
+      "price": "23",
+      "description": "",
+      "author": "",
+      "urlToImage": "",
+      "id": 6
+    }
+  ]
+}
