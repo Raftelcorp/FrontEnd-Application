@@ -9,9 +9,16 @@ export class RestapiService {
   constructor(private http:HttpClient) { 
      
   }
-
+  url="http://localhost:3000/api/v1/events";
   GetallUsers(){ 
-      return this.http.get(" http://localhost:3000/events");
+      return this.http.get(this.url);
 
+  }
+
+  saveEvent(data:any){
+    console.log("saving");
+    console.log(data);
+
+    return this.http.post(this.url, data);
   }
 }

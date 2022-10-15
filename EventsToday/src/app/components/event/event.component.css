@@ -35,9 +35,22 @@
   }
       
 
+  .main {
 
+    margin: 0 auto;
+}
 
-  table {
-    padding-top: 6%;
-    width: 100%;
-  }
+.mat-card{
+    max-width: 50%;
+}
+.main-image{
+
+    max-width: 80%;
+}
+
+p{
+    text-align: start;
+}
+.mat-grid-tile{
+    text-align: center;
+}
