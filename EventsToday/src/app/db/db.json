@@ -1,9 +1,0 @@
-{
-    "events": [
-      { "id": 1, "title": "Iromatsuri", "author": "organizacion1" , "date":"12/25", "price":"20", "img": "https://cdn.discordapp.com/attachments/1014632614419767360/1025596893323071538/unknown.png"},
-      { "id": 2, "title": "Comicon", "author": "RaftelCorp" , "date":"10/19", "price":"50", "img": "https://cdn.discordapp.com/attachments/1014632614419767360/1025596824486154260/unknown.png"},
-      { "id": 3, "title": "Concierto", "author": "comicon inc" , "date":"09/10", "price":"120", "img": "https://cdn.discordapp.com/attachments/1014632614419767360/1025596835072593970/unknown.png"},
-      { "id": 4, "title": "15 de sofi", "author": "x" , "date":"08/12", "price":"250", "img": "https://cdn.discordapp.com/attachments/1014632614419767360/1025597209577799721/unknown.png"}
-    ]
-    
-}
