@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MaterialModule } from './material.module';
+import { MaterialModule } from './material/material.module';
 import { AccountRecoveryComponent } from './components/account-recovery/account-recovery.component';
 import { PasswordChangeComponent } from './components/password-change/password-change.component';
 import { LoginComponent } from './components/login/login.component';
