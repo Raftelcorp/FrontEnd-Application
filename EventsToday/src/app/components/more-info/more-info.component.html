@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+      <mat-card-header>
+        <div class="main-image">
+          <img src="{{ event.urlImg }}" alt="title" />
+        </div>
+      </mat-card-header>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <div class="event-content">
+        <mat-card-title>{{ event.title }}</mat-card-title>
+        <mat-card-content>
+          <p>
+            <b>by: </b>
+            {{ event.author }}
+            <b>Date:</b> {{ event.startDate }} -
+            {{ event.endDate }}
+          </p>
+          <p></p>
+        </mat-card-content>
+        <mat-card-content>
+          <p>
+            {{ event.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-content>
+          <p>
+            <b>Price:</b>
+            {{ event.price }} soles
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button (click)="moveToBuy(event.id)">
+            Buy Tickets
+          </button>
+        </mat-card-actions>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+</mat-card>

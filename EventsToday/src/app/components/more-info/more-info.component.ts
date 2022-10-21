@@ -4,25 +4,28 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-event',
-  templateUrl: './event.component.html',
-  styleUrls: ['./event.component.css']
+  selector: 'app-more-info',
+  templateUrl: './more-info.component.html',
+  styleUrls: ['./more-info.component.css']
 })
-export class EventComponent implements OnInit {
+export class MoreInfoComponent implements OnInit {
 
+  id="";
+  event:any;
   constructor (private service:RestapiService, private router:Router, private route:ActivatedRoute) { };
 
-
   ngOnInit(): void {
-    this.Getallusers();
+    this.id=this.route.snapshot.params['id'];
+    console.log(this.id);
+
+    this.GetIdEvent();
   }
 
 
-  events:any;
-  Getallusers(){
-    this.service.GetallUsers().subscribe(response => {
-    this.events = response;
-    console.log(this.events);
+  GetIdEvent(){
+    this.service.GetById(this.id).subscribe(response => {
+    this.event = response;
+    console.log(this.event);
     })
 
   }
@@ -33,8 +36,8 @@ export class EventComponent implements OnInit {
    
   }
 
-  moveToEdit(id:any){
-    this.router.navigate(['/',id],{relativeTo: this.route});
+  moveToBuy(id:any){
+    this.router.navigate(['./more.info',id],{relativeTo: this.route});
 
   }
 
