@@ -1,0 +1,27 @@
+img{
+    width: 50%;
+}
+
+.row{
+    display: flex;
+   
+  }
+
+.main-image{
+
+    align-items: center;
+    justify-content: end;
+    text-align: end;
+}
+
+.event-content{
+   justify-content: start;
+   align-items: 0;
+    text-align: start;
+    padding-right: 40%;
+   
+}
+p{
+    font-size: 15px;
+}
+

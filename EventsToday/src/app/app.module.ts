@@ -18,8 +18,9 @@ import { RegisterEventComponent } from './components/register.event/register.eve
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
 
-import { EventComponent } from './components/event/event.component';
-import { NavbarComponent } from './components/navbar/navbar.component'
+import { EventComponent } from './components/events/event.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { MoreInfoComponent } from './components/more-info/more-info.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NavbarComponent } from './components/navbar/navbar.component'
     RegisterEventComponent,
     EventComponent,
     LoginComponent,
-    NavbarComponent
+    NavbarComponent,
+    MoreInfoComponent
 
   ],
   imports: [

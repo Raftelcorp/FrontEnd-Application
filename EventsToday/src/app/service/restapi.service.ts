@@ -15,6 +15,11 @@ export class RestapiService {
 
   }
 
+  GetById(id:any){
+    console.log("getting");
+    return this.http.get(`${this.url}/${id}`);
+  }
+
   saveEvent(data:any){
     console.log("saving");
     console.log(data);
