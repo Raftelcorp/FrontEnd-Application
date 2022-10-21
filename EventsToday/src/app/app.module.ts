@@ -18,7 +18,8 @@ import { RegisterEventComponent } from './components/register.event/register.eve
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
 
-import { EventComponent } from './components/event/event.component'
+import { EventComponent } from './components/event/event.component';
+import { NavbarComponent } from './components/navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,9 @@ import { EventComponent } from './components/event/event.component'
     PasswordChangeComponent,
     RegisterEventComponent,
     EventComponent,
-    LoginComponent
+    LoginComponent,
+    NavbarComponent
+
   ],
   imports: [
     BrowserModule,
