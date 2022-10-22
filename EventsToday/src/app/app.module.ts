@@ -20,8 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { EventComponent } from './components/events/event.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { MoreInfoComponent } from './components/more-info/more-info.component'
-
+import { MoreInfoComponent } from './components/more-info/more-info.component';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,7 @@ import { MoreInfoComponent } from './components/more-info/more-info.component'
     LoginComponent,
     NavbarComponent,
     MoreInfoComponent
-
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
