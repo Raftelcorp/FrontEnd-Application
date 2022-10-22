@@ -8,6 +8,7 @@ import { MaterialModule } from './material/material.module';
 import { AccountRecoveryComponent } from './components/account-recovery/account-recovery.component';
 import { PasswordChangeComponent } from './components/password-change/password-change.component';
 import { LoginComponent } from './components/login/login.component';
+import { CreateAccountComponent } from './components/create-account/create-account.component';
 
 import {MaterialExampleModule} from '../material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -31,7 +32,8 @@ import { MoreInfoComponent } from './components/more-info/more-info.component'
     EventComponent,
     LoginComponent,
     NavbarComponent,
-    MoreInfoComponent
+    MoreInfoComponent,
+    CreateAccountComponent
 
   ],
   imports: [
