@@ -20,7 +20,8 @@ import {MatButtonModule} from '@angular/material/button';
 
 import { EventComponent } from './components/events/event.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { MoreInfoComponent } from './components/more-info/more-info.component'
+import { MoreInfoComponent } from './components/more-info/more-info.component';
+import { CreateAccountComponent } from './components/create-account/create-account.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MoreInfoComponent } from './components/more-info/more-info.component'
     EventComponent,
     LoginComponent,
     NavbarComponent,
-    MoreInfoComponent
+    MoreInfoComponent,
+    CreateAccountComponent
 
   ],
   imports: [
