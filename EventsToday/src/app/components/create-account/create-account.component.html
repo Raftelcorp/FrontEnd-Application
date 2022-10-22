@@ -1,0 +1,23 @@
+<div class="table-wrapper">
+  <h1> Create an account</h1>
+  <form (submit)="onSubmit()" #studentForm= "ngForm">
+    <mat-form-field>
+        <input matInput placeholder="Name" name="Name" required [(ngModel)]="accountData.name"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Email" name="Email" required [(ngModel)]="accountData.email"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Age" name="age" required [(ngModel)]="accountData.age"/>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="password" matInput placeholder="Password" name="password" required [(ngModel)]="accountData.password"/>
+    </mat-form-field>
+    <ng-container >
+      <button mat-button color="primary">Save</button>
+      <button mat-button color="warm" [routerLink]="'/'">Cancel</button>
+    </ng-container>
+
+  </form>
+
+</div>
