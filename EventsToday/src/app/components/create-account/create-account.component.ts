@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import {Account} from "../../model/account";
 import {NgForm} from "@angular/forms";
-import { UserapiService } from 'src/app/service/usersapi.service';
+import { UserapiService } from 'src/app/service/userapi.service';
 
 
 @Component({
