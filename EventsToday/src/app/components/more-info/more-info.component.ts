@@ -12,6 +12,7 @@ export class MoreInfoComponent implements OnInit {
 
   id="";
   event:any;
+
   constructor (private service:RestapiService, private router:Router, private route:ActivatedRoute) { };
 
   ngOnInit(): void {

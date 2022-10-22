@@ -14,8 +14,8 @@
           <p>
             <b>by: </b>
             {{ event.author }}
-            <b>Date:</b> {{ event.startDate }} -
-            {{ event.endDate }}
+            <b>Date:</b> {{ event.startDate | date: "MM/dd" }} -
+            {{ event.endDate | date: "MM/dd/yyyy" }}
           </p>
           <p></p>
         </mat-card-content>
@@ -31,7 +31,7 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-raised-button (click)="moveToBuy(event.id)">
+          <button class="buyButton" mat-button (click)="moveToBuy(event.id)">
             Buy Tickets
           </button>
         </mat-card-actions>

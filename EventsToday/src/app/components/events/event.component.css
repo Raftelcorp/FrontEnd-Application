@@ -54,3 +54,8 @@ p{
 .mat-grid-tile{
   text-align: center;
 }
+
+.moreinfo-button{
+  background-color: #5b164d ;
+  color: white;
+}

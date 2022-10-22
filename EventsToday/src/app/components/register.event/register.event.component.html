@@ -2,9 +2,9 @@
   <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
     <h1>Register an event</h1>
     <div class="subregister">
-      <h4>Event´s name</h4>
+      <h4>Event´s Title</h4>
       <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
+        <mat-label>Title</mat-label>
         <input matInput formControlName="title" placeholder="Name" />
       </mat-form-field>
     </div>
@@ -39,13 +39,13 @@
 
       <h4>Price</h4>
       <mat-form-field appearance="fill">
-        <mat-label>Add a description</mat-label>
+        <mat-label>Add a price</mat-label>
         <input matInput formControlName="price" placeholder="price" />
       </mat-form-field>
 
       <h4>URL Image</h4>
       <mat-form-field appearance="fill">
-        <mat-label>Add a description</mat-label>
+        <mat-label>URL Link</mat-label>
         <input matInput formControlName="urlImage" placeholder="url link" />
       </mat-form-field>
     </div>

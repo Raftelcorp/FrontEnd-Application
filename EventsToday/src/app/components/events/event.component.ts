@@ -19,10 +19,12 @@ export class EventComponent implements OnInit {
 
 
   events:any;
+
   Getallusers(){
     this.service.GetallUsers().subscribe(response => {
     this.events = response;
     console.log(this.events);
+
     })
 
   }

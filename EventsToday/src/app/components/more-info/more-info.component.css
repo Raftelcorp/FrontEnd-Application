@@ -18,10 +18,15 @@ img{
    justify-content: start;
    align-items: 0;
     text-align: start;
+    padding-left: 5%;
     padding-right: 40%;
    
 }
 p{
     font-size: 15px;
 }
+.buyButton{
 
+background-color: #5b164d;
+color: white;
+}

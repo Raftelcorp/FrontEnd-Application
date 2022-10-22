@@ -2,69 +2,47 @@
   "events": [
     {
       "id": 1,
-      "title": "Evento1",
+      "title": "Happy Halloween",
       "author": "organizacion1",
-      "startDate": "08/12",
-      "endDate": "08/12",
-      "description": "xd",
+      "startDate": "08/12/2022",
+      "endDate": "08/12/2022",
+      "description": "Halloween is a holiday celebrated each year on October 31, and Halloween 2022 will occur on Monday, October 31. The tradition originated with the ancient Celtic festival of Samhain, when people would light bonfires and wear costumes to ward off ghosts. In the eighth century, Pope Gregory III designated November 1 as a time to honor all saints. Soon, All Saints Day incorporated some of the traditions of Samhain. The evening before was known as All Hallows Eve, and later Halloween. Over time, Halloween evolved into a day of activities like trick-or-treating, carving jack-o-lanterns, festive gatherings, donning costumes and eating treats.",
       "price": "20",
       "tickets": 100,
       "urlImg": "https://cdn.discordapp.com/attachments/959280112279379968/1030975610295689216/unknown.png"
     },
     {
       "id": 2,
-      "title": "Evento2",
+      "title": "Arctic Monkeys",
       "author": "RaftelCorp",
-      "startDate": "08/12",
-      "endDate": "08/12",
-      "description": "xd",
+      "startDate": "08/12/2022",
+      "endDate": "08/12/2022",
+      "description": "Arctic Monkeys are an English rock band formed in Sheffield in 2002. The group consists of Alex Turner (lead vocals, guitar, keyboards), Jamie Cook (guitar, keyboards), Nick O'Malley (bass guitar, backing vocals), and Matt Helders (drums, backing vocals). Former band member Andy Nicholson (bass guitar, backing vocals) left the band in 2006 shortly after their debut album was released.",
       "price": "50",
       "tickets": 100,
       "urlImg": "https://cdn.discordapp.com/attachments/959280112279379968/1030976032146194482/unknown.png"
     },
     {
       "id": 3,
-      "title": "Comicon",
-      "author": "comicon inc",
-      "startDate": "08/12",
-      "endDate": "08/12",
-      "description": "xd",
+      "title": "Lollapalooza",
+      "author": "Lollapalooza events",
+      "startDate": "08/12/2022",
+      "endDate": "08/12/2022",
+      "description": "Lollapalooza (Lolla) is an annual American four-day music festival held in Grant Park in Chicago. It originally started as a touring event in 1991 but several years later made Chicago the permanent location for the annual music festival. Music genres include but are not limited to alternative rock, heavy metal, punk rock, hip hop, and electronic dance music. Lollapalooza has also featured visual arts, nonprofit organizations, and political organizations. The festival, held in Grant Park, hosts an estimated 400,000 people each July and sells out annually. Lollapalooza is one of the largest and most iconic music festivals in the world and one of the longest-running in the United States.",
       "price": "120",
       "tickets": 100,
       "urlImg": "https://cdn.discordapp.com/attachments/959280112279379968/1030975929356402688/unknown.png"
     },
     {
       "id": 4,
-      "title": "Concierto",
-      "author": " ",
-      "startDate": "08/12",
-      "endDate": "08/12",
-      "description": "xd",
+      "title": "Oktoberfest",
+      "author": "EventsToday",
+      "startDate": "08/12/2022",
+      "endDate": "08/12/2022",
+      "description": "The Oktoberfest (Bavarian: Wiesn, Oktobafest) is the world's largest Volksfest, featuring a beer festival and a travelling carnival. It is held annually in Munich, Bavaria, Germany. It is a 16- to 18-day folk festival running from mid- or late-September to around the first Sunday in October, with more than six million international and national visitors attending the event. Locally, it is called d’Wiesn, after the colloquial name for the fairgrounds, Theresienwiese. The Oktoberfest is an important part of Bavarian culture, having been held since the year 1810. Other cities across the world also hold Oktoberfest celebrations that are modeled after the original Munich event.",
       "price": "250",
       "tickets": 100,
       "urlImg": "https://cdn.discordapp.com/attachments/959280112279379968/1030975765585592320/unknown.png"
-    },
-    {
-      "title": "aaaa",
-      "startDate": "2022-10-09T05:00:00.000Z",
-      "endDate": "2022-10-13T05:00:00.000Z",
-      "price": "23",
-      "description": "xd",
-      "author": "",
-      "urlToImage": "",
-      "tickets": 100,
-      "id": 5
-    },
-    {
-      "title": "xa",
-      "startDate": "2022-10-10T05:00:00.000Z",
-      "endDate": "2023-01-13T05:00:00.000Z",
-      "price": "23",
-      "description": "",
-      "author": "",
-      "urlToImage": "",
-      "tickets": 100,
-      "id": 6
     }
   ]
 }
