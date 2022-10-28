@@ -16,7 +16,7 @@ export class MoreInfoComponent implements OnInit {
   constructor (private service:RestapiService, private router:Router, private route:ActivatedRoute) { };
 
   ngOnInit(): void {
-    this.id=this.route.snapshot.params['id'];
+    this.id=this.route.snapshot.params['eventId'];
     console.log(this.id);
 
     this.GetIdEvent();

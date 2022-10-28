@@ -10,9 +10,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RegisterEventComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private event:RestapiService, private router:Router, private route:ActivatedRoute ) { 
+  constructor(private formBuilder: FormBuilder, private event:RestapiService, private router:Router, public route:ActivatedRoute ) { 
   };
 
+  id:any;
   checkoutForm = this.formBuilder.group({
     title: ['', Validators.required],
     startDate: ['', Validators.required],
@@ -20,11 +21,14 @@ export class RegisterEventComponent implements OnInit {
     price: ['', Validators.required], 
     description: '',
     author: '',
-    urlImage: ''
+    urlImage: '',
+    ownerId: 1
   });
 
-
   ngOnInit(): void {
+    this.checkoutForm.controls.ownerId.setValue( parseInt(this.route.snapshot.params['userId']) );
+    console.log(this.checkoutForm.controls['ownerId'].value)
+
   }
 onSubmit(): void {
 
