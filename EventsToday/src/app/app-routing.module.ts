@@ -8,18 +8,19 @@ import { AccountRecoveryComponent } from './components/account-recovery/account-
 import { EventComponent } from './components/events/event.component';
 import { LoginComponent } from './components/login/login.component';
 import { MoreInfoComponent } from './components/more-info/more-info.component';
+import { ClienteMenuComponent } from './components/cliente-menu/cliente-menu.component';
+
 const routes: Routes = [
-  {path:'',component:EventComponent},
+  {path:'',component:LoginComponent},
 {path:'register.event',component:RegisterEventComponent},
  {path:'published.event',component:PublishedEventComponent},
  {path:'login',component:LoginComponent},
-
+  {path:'client.menu/:id',component:ClienteMenuComponent},
  {path:'password.change',component:PasswordChangeComponent},
  {path:'account.recovery',component:AccountRecoveryComponent},
 
  {path:'more.info/:id',component:MoreInfoComponent},
  {path:'create-account',component:CreateAccountComponent},
- ];
 
 
 @NgModule({

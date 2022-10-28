@@ -1,4 +1,4 @@
-<h1>Events</h1>
+<h1>Eventos</h1>
 <div>
   <div class="row">
     <div class="column2 left">
@@ -29,7 +29,7 @@
         <mat-card-content>
           <p>
             <b>Date:</b>
-            {{ event.startDate | date: "fullDate" }}
+            {{ event.startDate }}
           </p>
         </mat-card-content>
         <mat-card-content>
@@ -39,13 +39,11 @@
           </p>
         </mat-card-content>
         <mat-card-actions>
-          <button
-            class="moreinfo-button"
-            mat-button
-            (click)="moveToInfo(event.id)"
-          >
+          <button mat-raised-button (click)="moveToInfo(event.id)">
+          
             More Info
           </button>
+          <button mat-raised-button (click)="buyTicket(event.id)">Buy Ticket</button>
         </mat-card-actions>
       </mat-card>
     </mat-grid-tile>

@@ -22,6 +22,8 @@ import { EventComponent } from './components/events/event.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MoreInfoComponent } from './components/more-info/more-info.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
+import { ClienteMenuComponent } from './components/cliente-menu/cliente-menu.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,8 +33,10 @@ import { CreateAccountComponent } from './components/create-account/create-accou
     EventComponent,
     LoginComponent,
     NavbarComponent,
-    MoreInfoComponent
-    CreateAccountComponent
+    MoreInfoComponent,
+    CreateAccountComponent,
+    ClienteMenuComponent
+
   ],
   imports: [
     BrowserModule,

@@ -1,14 +1,14 @@
 <div>
-  <mat-toolbar class="navbar">
+  <mat-toolbar color="primary">
     <span>
-      <mat-icon>confirmation_number</mat-icon>
+      <mat-icon>group</mat-icon>
       Events Today
     </span>
-    <a mat-button routerLink="/">Home</a>
-    <a mat-button routerLink="register.event">Publish Event</a>
+    <a mat-button (click)="toHome()">Home</a>
+    <a mat-button routerLink="/register.event">Publish Event</a>
     <div class="spacer"></div>
-
-    <a mat-button routerLink="/login">Login</a>
-    <a mat-raised-button routerLink="/create-account">Register</a>
+    <a>{{name}}</a>
+    <a mat-button routerLink="/tickets">My tickets</a>
+    <a mat-raised-button routerLink="/">LogOut</a>
   </mat-toolbar>
 </div>
