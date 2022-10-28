@@ -23,7 +23,7 @@ export class NavbarComponent implements OnInit {
     })
   }
   toHome(){
-    this.router.navigate(['/client.event/',this.clientId],{relativeTo: this.route});
+    this.router.navigate([`/client.menu/${this.clientId}/events`],{relativeTo: this.route});
    }
 
 }
