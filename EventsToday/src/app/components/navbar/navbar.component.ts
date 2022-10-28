@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { UserapiService } from 'src/app/service/usersapi.service';
+import { UserapiService } from 'src/app/service/userapi.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 @Component({
@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
    
   ngOnInit(): void {
     this.userapiService.GetById(this.clientId).subscribe((response)=>{
-      this.name=response.name;
+     this.name=response.name;
       console.log("obteniendo nombre: ");
       console.log(this.name);
     })

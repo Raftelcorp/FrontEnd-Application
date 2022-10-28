@@ -18,7 +18,6 @@ const routes: Routes = [
   {path:'client.menu/:id',component:ClienteMenuComponent},
  {path:'password.change',component:PasswordChangeComponent},
  {path:'account.recovery',component:AccountRecoveryComponent},
-
  {path:'more.info/:id',component:MoreInfoComponent},
  {path:'create-account',component:CreateAccountComponent},
  ];
