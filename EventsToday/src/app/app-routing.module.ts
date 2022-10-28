@@ -21,6 +21,8 @@ const routes: Routes = [
 
  {path:'more.info/:id',component:MoreInfoComponent},
  {path:'create-account',component:CreateAccountComponent},
+ ];
+
 
 
 @NgModule({

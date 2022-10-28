@@ -16,7 +16,7 @@ import { Injectable } from '@angular/core';
 
     GetById(id:any){
       console.log("getting");
-      return this.http.get(${this.url}/${id});
+      return this.http.get(`${this.url}/${id}`);
     }
 
     saveUser(data:any){

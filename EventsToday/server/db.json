@@ -132,5 +132,35 @@
       "userId": "1",
       "eventId": 5
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Francisco Gonzales",
+      "age": 25,
+      "email": "francois10@hotmail.com",
+      "password": "12345"
+    },
+    {
+      "name": "",
+      "age": "",
+      "email": "",
+      "password": "",
+      "id": 2
+    },
+    {
+      "name": "Francis",
+      "email": "aaa@gmail.com",
+      "age": 19,
+      "password": "12345",
+      "id": 3
+    },
+    {
+      "name": "Maria",
+      "email": "eoeoe@gmail.com",
+      "age": 19,
+      "password": "12345678",
+      "id": 4
+    }
   ]
 }
