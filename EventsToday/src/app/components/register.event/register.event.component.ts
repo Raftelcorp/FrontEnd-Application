@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestapiService } from 'src/app/service/restapi.service'; 
+import { EventApiService } from 'src/app/service/eventapi.service';
 import { FormGroup,FormControl,FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class RegisterEventComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private event:RestapiService, private router:Router, public route:ActivatedRoute ) { 
+  constructor(private formBuilder: FormBuilder, private event:EventApiService, private router:Router, public route:ActivatedRoute ) { 
   };
 
   id:any;
@@ -26,8 +26,8 @@ export class RegisterEventComponent implements OnInit {
   });
 
   ngOnInit(): void {
-    this.checkoutForm.controls.ownerId.setValue( parseInt(this.route.snapshot.params['userId']) );
-    console.log(this.checkoutForm.controls['ownerId'].value)
+   // this.checkoutForm.controls.ownerId.setValue( parseInt(this.route.snapshot.params['userId']) );
+   // console.log(this.checkoutForm.controls['ownerId'].value)
 
   }
 onSubmit(): void {

@@ -1,26 +1,27 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RestapiService {
+export class EventApiService {
 
   constructor(private http:HttpClient) { 
      
   }
-  url="http://localhost:3000/api/v1/events";
+  url="http://localhost:8080/api/events";
   GetallUsers(){ 
       return this.http.get(this.url);
 
   }
 
-  GetById(id:any){
+  GetById(id:any): Observable<any>{
     console.log("getting");
     return this.http.get(`${this.url}/${id}`);
   }
 
-  saveEvent(data:any){
+  saveEvent(data:any): Observable<any>{
     console.log("saving");
     console.log(data);
 

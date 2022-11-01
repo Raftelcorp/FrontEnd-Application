@@ -9,7 +9,7 @@ export class TicketapiService {
   constructor(private http:HttpClient) { 
      
   }
-  url="http://localhost:3000/api/v1/ticket";
+  url="http://localhost:8080/api/tickets";
   getallTickets(){ 
       return this.http.get<any>(this.url);
 
