@@ -3,6 +3,7 @@ import { EventApiService } from 'src/app/service/eventapi.service';
 import { FormGroup,FormControl,FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { ThisReceiver } from '@angular/compiler';
 @Component({
   selector: 'app-register.event',
   templateUrl: './register.event.component.html',
@@ -22,13 +23,12 @@ export class RegisterEventComponent implements OnInit {
     description: '',
     author: '',
     urlImage: '',
-    ownerId: 1
+
   });
 
   ngOnInit(): void {
-   // this.checkoutForm.controls.ownerId.setValue( parseInt(this.route.snapshot.params['userId']) );
-   // console.log(this.checkoutForm.controls['ownerId'].value)
-
+     this.id = ( parseInt(this.route.snapshot.params['userId']) );
+    console.log(this.id)
   }
 onSubmit(): void {
 
@@ -51,7 +51,7 @@ onSubmit(): void {
 
   }
   saveData(){
-    this.event.saveEvent(this.checkoutForm.value).subscribe((result)=> {
+    this.event.saveEvent(this.id,this.checkoutForm.value).subscribe((result)=> {
       console.log(result);
     });
   }

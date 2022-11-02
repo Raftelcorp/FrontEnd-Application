@@ -21,10 +21,10 @@ export class EventApiService {
     return this.http.get(`${this.url}/${id}`);
   }
 
-  saveEvent(data:any): Observable<any>{
+  saveEvent(id:any,data:any): Observable<any>{
     console.log("saving");
-    console.log(data);
+    console.log(id,data);
 
-    return this.http.post(this.url, data);
+    return this.http.post(this.url+ `/${id}`, data);
   }
 }
