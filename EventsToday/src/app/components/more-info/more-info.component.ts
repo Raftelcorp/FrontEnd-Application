@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RestapiService } from 'src/app/service/restapi.service';
+import { EventApiService } from 'src/app/service/eventapi.service'; 
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 
@@ -13,10 +13,10 @@ export class MoreInfoComponent implements OnInit {
   id="";
   event:any;
 
-  constructor (private service:RestapiService, private router:Router, private route:ActivatedRoute) { };
+  constructor (private service:EventApiService, private router:Router, private route:ActivatedRoute) { };
 
   ngOnInit(): void {
-    this.id=this.route.snapshot.params['id'];
+    this.id=this.route.snapshot.params['eventId'];
     console.log(this.id);
 
     this.GetIdEvent();

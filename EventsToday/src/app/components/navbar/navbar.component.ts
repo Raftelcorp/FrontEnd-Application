@@ -1,5 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { UserapiService } from 'src/app/service/usersapi.service';
+import { UserapiService } from 'src/app/service/userapi.service';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 @Component({

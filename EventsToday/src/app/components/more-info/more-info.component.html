@@ -3,31 +3,31 @@
     <mat-grid-tile>
       <mat-card-header>
         <div class="main-image">
-          <img src="{{ event.urlImg }}" alt="title" />
+          <img src="{{ event?.urlImg }}" alt="title" />
         </div>
       </mat-card-header>
     </mat-grid-tile>
     <mat-grid-tile>
       <div class="event-content">
-        <mat-card-title>{{ event.title }}</mat-card-title>
+        <mat-card-title>{{ event?.title }}</mat-card-title>
         <mat-card-content>
           <p>
             <b>by: </b>
-            {{ event.author }}
-            <b>Date:</b> {{ event.startDate | date: "MM/dd" }} -
-            {{ event.endDate | date: "MM/dd/yyyy" }}
+            {{ event?.author }}
+            <b>Date:</b> {{ event?.startDate | date: "MM/dd" }} -
+            {{ event?.endDate | date: "MM/dd/yyyy" }}
           </p>
           <p></p>
         </mat-card-content>
         <mat-card-content>
           <p>
-            {{ event.description }}
+            {{ event?.description }}
           </p>
         </mat-card-content>
         <mat-card-content>
           <p>
             <b>Price:</b>
-            {{ event.price }} soles
+            {{ event?.price }} soles
           </p>
         </mat-card-content>
         <mat-card-actions>

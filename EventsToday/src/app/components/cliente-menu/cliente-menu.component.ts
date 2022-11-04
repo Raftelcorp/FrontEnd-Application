@@ -8,13 +8,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ClienteMenuComponent implements OnInit {
   id="";
-  constructor(private route:ActivatedRoute) { 
-    this.id=this.route.snapshot.params['id']
+  constructor(private route:ActivatedRoute, private router:Router) { 
+    this.id=this.route.snapshot.params['userId']
   }
 
 
   ngOnInit(): void {
-    
+    this.router.navigate(['./events'],{relativeTo: this.route})
   }
 
 }

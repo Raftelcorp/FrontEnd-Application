@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormBuilder } from '@angular/forms';
-import { UserapiService } from 'src/app/service/usersapi.service';
+import { UserapiService } from 'src/app/service/userapi.service'; 
 import { ActivatedRoute } from '@angular/router';
-import { RestapiService } from 'src/app/service/restapi.service';
+import { EventApiService } from 'src/app/service/eventapi.service'; 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
 
   public logInForm!:FormGroup;
 
-  constructor(private apiservice:RestapiService,private formBuilder: FormBuilder, private userapiService:UserapiService,private route: ActivatedRoute) { }
+  constructor(private apiservice:EventApiService,private formBuilder: FormBuilder, private userapiService:UserapiService,private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.logInForm=this.formBuilder.group({

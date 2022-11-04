@@ -1,5 +1,5 @@
 import { Component, OnInit ,Input} from '@angular/core';
-import { RestapiService } from 'src/app/service/restapi.service';
+import { EventApiService } from 'src/app/service/eventapi.service'; 
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
@@ -13,7 +13,7 @@ import { Ticket } from 'src/app/model/ticket';
 export class EventComponent implements OnInit {
   @Input() userId:any;
   ticket:Ticket;
-  constructor (private ticketApiService:TicketapiService, private service:RestapiService, private router:Router, private route:ActivatedRoute,private formBuilder:FormBuilder) { 
+  constructor (private ticketApiService:TicketapiService, private service:EventApiService, private router:Router, private route:ActivatedRoute,private formBuilder:FormBuilder) { 
     this.ticket={} as Ticket;
   };
 
