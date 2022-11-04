@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TicketapiService } from 'src/app/service/tickerapi.service';
-import { RestapiService } from 'src/app/service/restapi.service';
+import { EventApiService } from 'src/app/service/eventapi.service'; 
 import { ActivatedRoute,Router } from '@angular/router';
 @Component({
   selector: 'app-tickets',
@@ -10,7 +10,7 @@ import { ActivatedRoute,Router } from '@angular/router';
 export class TicketsComponent implements OnInit {
   tickets:any;
   id:any;
-  constructor(private router:Router, private eventApiSerice:RestapiService,private ticketApiService:TicketapiService,private activateRoute: ActivatedRoute) { }
+  constructor(private router:Router, private eventApiSerice:EventApiService,private ticketApiService:TicketapiService,private activateRoute: ActivatedRoute) { }
   
   ngOnInit(): void {
     if(this.activateRoute.parent){

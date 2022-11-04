@@ -23,11 +23,11 @@ export class RegisterEventComponent implements OnInit {
     description: '',
     author: '',
     urlImage: '',
-    ownerId:''
+
   });
 
   ngOnInit(): void {
-     this.id = ( parseInt(this.route.snapshot.params['userId']) );
+     this.id = ( parseInt(this.route.snapshot.params['id']) );
     console.log(this.id)
   }
 onSubmit(): void {
@@ -43,11 +43,6 @@ onSubmit(): void {
     }
     if(this.checkoutForm.controls['price'].value === ''){
       return
-    }
-    if(this.route.parent){
-      this.route.parent.params.subscribe(params=>{
-        this.checkoutForm.controls['ownerId']=params['id'];
-      })
     }
     this.saveData();
     this.checkoutForm.reset();

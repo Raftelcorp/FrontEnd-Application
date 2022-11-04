@@ -23,11 +23,12 @@ const routes: Routes = [
   {path:'client.menu/:id',component:ClienteMenuComponent,
   children:[
     {path:'', redirectTo:'events',pathMatch:'full'},
-    {path:'events',component:EventComponent},
+    {path:'events',component:EventComponent },
+    {path:'events/more.info/:eventId',component:MoreInfoComponent  },
     {path:'register.event',component:RegisterEventComponent},
     {path:'password.change',component:PasswordChangeComponent},
     {path:'account.recovery',component:AccountRecoveryComponent},
-    {path:'more.info/:id',component:MoreInfoComponent},
+  
     {path:'tickets',component:TicketsComponent}
   ]},
   {path:'create-account',component:CreateAccountComponent},

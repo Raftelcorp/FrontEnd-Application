@@ -23,7 +23,7 @@ export class NavbarComponent implements OnInit {
     })
   }
   toHome(){
-    this.router.navigate([''],{relativeTo: this.route});
+    this.router.navigate(['./'],{relativeTo: this.route});
    }
 
 }
