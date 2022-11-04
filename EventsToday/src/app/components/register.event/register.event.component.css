@@ -9,12 +9,9 @@
 .register h1{
     font-size: 48px;
 }
-.register button{
-    background-color: #5c164E;
-    color: white;
-}
 
 button{
-    background-color: #6557ff;
-     color: white; 
+    
+    background-color: #6557ff;     
+    color: white; 
 }

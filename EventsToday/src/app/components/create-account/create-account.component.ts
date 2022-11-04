@@ -2,6 +2,7 @@ import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import {Account} from "../../model/account";
 import {NgForm} from "@angular/forms";
 import { UserapiService } from 'src/app/service/userapi.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,7 +20,7 @@ export class CreateAccountComponent implements OnInit {
   accountForm!: NgForm;
 
 
-  constructor(private userService: UserapiService) {
+  constructor(private userService: UserapiService, private router:Router) {
     this.accountData= {} as Account;
   }
 
@@ -47,6 +48,8 @@ export class CreateAccountComponent implements OnInit {
     }else{
       console.log('Invalid data');
     }
+    this.router.navigate(['/login']);
+
   }
 
 
