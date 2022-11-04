@@ -8,7 +8,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-  @Input() clientId:any;
   name:string;
   constructor(private userapiService:UserapiService,private route:ActivatedRoute,private router:Router) {
     this.name="";
@@ -16,14 +15,15 @@ export class NavbarComponent implements OnInit {
   }
    
   ngOnInit(): void {
-    this.userapiService.GetById(this.clientId).subscribe((response)=>{
+    console.log("obteniendo id de navbar: ",this.route.snapshot.params['id'])
+    this.userapiService.GetById(this.route.snapshot.params['id']).subscribe((response)=>{
       this.name=response.name;
       console.log("obteniendo nombre: ");
       console.log(this.name);
     })
   }
   toHome(){
-    this.router.navigate(['/client.event/',this.clientId],{relativeTo: this.route});
+    this.router.navigate([''],{relativeTo: this.route});
    }
 
 }

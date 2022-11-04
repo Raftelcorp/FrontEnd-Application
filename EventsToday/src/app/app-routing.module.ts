@@ -9,20 +9,27 @@ import { EventComponent } from './components/events/event.component';
 import { LoginComponent } from './components/login/login.component';
 import { MoreInfoComponent } from './components/more-info/more-info.component';
 import { ClienteMenuComponent } from './components/cliente-menu/cliente-menu.component';
+import { TicketsComponent } from './components/tickets/tickets.component';
+
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
-{path:'register.event',component:RegisterEventComponent},
+
  {path:'published.event',component:PublishedEventComponent},
  {path:'login',component:LoginComponent},
-  {path:'client.menu/:id',component:ClienteMenuComponent},
- {path:'password.change',component:PasswordChangeComponent},
- {path:'account.recovery',component:AccountRecoveryComponent},
-
- {path:'more.info/:id',component:MoreInfoComponent},
+  {path:'client.menu/:id',component:ClienteMenuComponent,
+  children:[
+    {path:'', redirectTo:'events',pathMatch:'full'},
+    {path:'events',component:EventComponent},
+    {path:'register.event',component:RegisterEventComponent},
+    {path:'password.change',component:PasswordChangeComponent},
+    {path:'account.recovery',component:AccountRecoveryComponent},
+    {path:'more.info/:id',component:MoreInfoComponent},
+    {path:'tickets',component:TicketsComponent}
+  ]},
+ 
  {path:'create-account',component:CreateAccountComponent},
  ];
-
 
 
 @NgModule({

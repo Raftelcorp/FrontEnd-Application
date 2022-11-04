@@ -20,7 +20,8 @@ export class RegisterEventComponent implements OnInit {
     price: ['', Validators.required], 
     description: '',
     author: '',
-    urlImage: ''
+    urlImage: '',
+    ownerId:''
   });
 
 
@@ -39,6 +40,11 @@ onSubmit(): void {
     }
     if(this.checkoutForm.controls['price'].value === ''){
       return
+    }
+    if(this.route.parent){
+      this.route.parent.params.subscribe(params=>{
+        this.checkoutForm.controls['ownerId']=params['id'];
+      })
     }
     this.saveData();
     this.checkoutForm.reset();

@@ -1,0 +1,19 @@
+<h1>Your Tickets</h1>
+<div class="main">
+    <mat-grid-list cols="3" rowHeight="1:1">
+      <mat-grid-tile *ngFor="let ticket of tickets">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Id del evento: {{ ticket.id }}</mat-card-title>
+          </mat-card-header>
+          <img class="main-image" src="../../../assets/qr.png" alt="title" />
+          <mat-card-content>
+            <p>
+              <b>Id de usuario:</b>
+              {{ ticket.userId }}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>

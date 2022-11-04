@@ -22,6 +22,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MoreInfoComponent } from './components/more-info/more-info.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { ClienteMenuComponent } from './components/cliente-menu/cliente-menu.component'
+import { TicketsComponent } from './components/tickets/tickets.component'
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ClienteMenuComponent } from './components/cliente-menu/cliente-menu.com
     NavbarComponent,
     MoreInfoComponent,
     CreateAccountComponent,
-    ClienteMenuComponent
+    ClienteMenuComponent,
+    TicketsComponent
   ],
   imports: [
     BrowserModule,
