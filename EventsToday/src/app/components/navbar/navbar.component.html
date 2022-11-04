@@ -1,5 +1,5 @@
 <div>
-  <mat-toolbar color="primary">
+  <mat-toolbar>
     <span>
       <mat-icon>group</mat-icon>
       Events Today
@@ -7,7 +7,7 @@
     <a mat-button (click)="toHome()">Home</a>
     <a mat-button routerLink="./register.event">Publish Event</a>
     <div class="spacer"></div>
-    <a>{{name}}</a>
+    <a>{{ name }}</a>
     <a mat-button [routerLink]="['tickets']">My tickets</a>
     <a mat-raised-button (click)="toHome()">LogOut</a>
   </mat-toolbar>

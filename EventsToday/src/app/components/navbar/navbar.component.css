@@ -11,3 +11,7 @@ img{
     width: 120%;
 }
 
+
+mat-toolbar{
+ background-color: #6557ff;     color: white; 
+}
