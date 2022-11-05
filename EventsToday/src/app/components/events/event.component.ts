@@ -21,8 +21,13 @@ export class EventComponent implements OnInit {
 
   ngOnInit(): void {
     this.Getallusers();
-  }
 
+    if(this.route.parent){
+      this.route.parent.params.subscribe(params=>{
+        this.userId=params['id'];
+      })
+    }
+  }
 
   events:any;
   Getallusers(){
@@ -43,10 +48,11 @@ export class EventComponent implements OnInit {
     this.router.navigate(['./more.info',id],{relativeTo: this.route});
   }
   buyTicket(eventId:any){
-    this.ticket.id=0;
-    this.ticket.userId=this.userId;
-    this.ticket.eventId=eventId;
-    this.ticketApiService.saveTicket(this.ticket).subscribe(response=>{
+    //this.ticket.userId=this.userId;
+   // this.ticket.eventId=eventId;
+    console.log("userid")
+    console.log(this.userId)
+    this.ticketApiService.saveTicket(this.userId, eventId ,this.ticket).subscribe(response=>{
       console.log(response);
     })
   } 

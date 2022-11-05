@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TicketapiService } from 'src/app/service/tickerapi.service';
 import { EventApiService } from 'src/app/service/eventapi.service'; 
+import { UserapiService } from 'src/app/service/userapi.service';
 import { ActivatedRoute,Router } from '@angular/router';
 @Component({
   selector: 'app-tickets',
@@ -10,7 +11,9 @@ import { ActivatedRoute,Router } from '@angular/router';
 export class TicketsComponent implements OnInit {
   tickets:any;
   id:any;
-  constructor(private router:Router, private eventApiSerice:EventApiService,private ticketApiService:TicketapiService,private activateRoute: ActivatedRoute) { }
+  eventname:any;
+  user:any;
+  constructor(private router:Router, private eventApiSerice:EventApiService,private ticketApiService:TicketapiService,private userApiService:UserapiService, private activateRoute: ActivatedRoute) { }
   
   ngOnInit(): void {
     if(this.activateRoute.parent){
@@ -20,18 +23,28 @@ export class TicketsComponent implements OnInit {
     }
     console.log("id desde el hijo:", this.id);
     this.getAllTickets();
+    this.getEventName(this.id);
+    this.getUser(this.id);
 
   }
   getAllTickets(){
-    
     this.tickets= this.ticketApiService.getByUserId(this.id);
     console.log(this.tickets);
   }
   getEventName(id:any){
-    let eventname="";
+
     this.eventApiSerice.GetById(id).subscribe(response=>{
-      eventname=response.title;
+     
+      this.eventname=response;
+    
     })
-    return eventname;
+  }
+  getUser(id:any){
+
+    this.userApiService.GetById(id).subscribe(response=>{
+     
+      this.user=response;
+    
+    })
   }
 }

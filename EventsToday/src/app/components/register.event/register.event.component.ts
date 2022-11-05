@@ -5,6 +5,7 @@ import { FormGroup,FormControl,FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { ThisReceiver } from '@angular/compiler';
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-register.event',
   templateUrl: './register.event.component.html',
@@ -12,7 +13,7 @@ import { ThisReceiver } from '@angular/compiler';
 })
 export class RegisterEventComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private event:EventApiService, private userapi:UserapiService, private router:Router, public route:ActivatedRoute ) { 
+  constructor(private formBuilder: FormBuilder, private event:EventApiService, private userapi:UserapiService, private router:Router, public route:ActivatedRoute, private _location: Location ) { 
   };
 
   id:any;
@@ -55,8 +56,7 @@ onSubmit(): void {
     }
     this.saveData();
     this.checkoutForm.reset();
-    this.resetPage();
-    this.router.navigate(['/']);
+   this._location.back();
 
   }
   saveData(){
@@ -67,7 +67,7 @@ onSubmit(): void {
 
   resetPage(){
     this.router.routeReuseStrategy.shouldReuseRoute=()=>false;
-    this.router.navigate(['./'],{relativeTo: this.route});
+    this.router.navigate(['/'],{relativeTo: this.route});
    
   }
 }
