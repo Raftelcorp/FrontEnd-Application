@@ -25,7 +25,7 @@ import { Observable } from 'rxjs';
     editUser(id:any,data:any){
       console.log("editing")
       console.log(data);
-      return this.http.put(`${this.url}/${id}`,data);
+      return this.http.patch(`${this.url}/${id}`,data);
     }
     saveUser(data:any): Observable<any>{
       console.log("saving");

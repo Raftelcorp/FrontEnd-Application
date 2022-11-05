@@ -12,6 +12,8 @@ import { Account } from 'src/app/model/account';
 export class NavbarComponent implements OnInit {
   name:string;
   account:Account;
+  userId:any;
+  user:any;
   constructor(public dialog: MatDialog,private userapiService:UserapiService,private route:ActivatedRoute,private router:Router) {
     this.name="";
     this.account={} as Account;
@@ -21,6 +23,7 @@ export class NavbarComponent implements OnInit {
     console.log("obteniendo id de navbar: ",this.route.snapshot.params['id'])
     this.userapiService.GetById(this.route.snapshot.params['id']).subscribe((response)=>{
       this.name=response.name;
+      this.user=response;
       console.log("obteniendo nombre: ");
       console.log(this.name);
     })
@@ -29,15 +32,8 @@ export class NavbarComponent implements OnInit {
     this.router.navigate(['./'],{relativeTo: this.route});
    }
    openDialog(){
-    const dialogRef = this.dialog.open(DialogContentExampleDialog);
-    dialogRef.afterClosed().subscribe(result => {
-      this.account=result;
-      this.account.id=(parseInt( this.route.snapshot.params['id']));
-      console.log(this.account);
-      this.userapiService.editUser(this.account.id,this.account).subscribe(response=>{
-        console.log(response);
-      });
-    });
+    let dialogRef = this.dialog.open(  DialogContentExampleDialog);
+    dialogRef.componentInstance.setUser(this.user)
    }
 }
 @Component({
@@ -46,8 +42,19 @@ export class NavbarComponent implements OnInit {
 })
 export class DialogContentExampleDialog {
   accountEdit:Account;
+  user:any;
   constructor(private userapiService:UserapiService){
     this.accountEdit={}as Account;
   }
-  
+  setUser(user:any){
+    this.user = user;
+  }
+
+  updateUser(){
+    this.userapiService.editUser(this.user.id, this.user).subscribe(response=>{
+    
+   });
+  }
+ 
+
 }
