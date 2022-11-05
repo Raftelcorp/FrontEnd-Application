@@ -22,7 +22,11 @@ import { Observable } from 'rxjs';
       console.log("getting");
       return this.http.get<any>(`${this.url}/${id}`);
     }
-  
+    editUser(id:any,data:any){
+      console.log("editandooooooooooo")
+      console.log(data);
+      return this.http.put(`${this.url}/${id}`,data);
+    }
     saveUser(data:any): Observable<any>{
       console.log("saving");
       console.log(data);

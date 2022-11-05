@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>Edit your account</h2>
+<mat-dialog-content class="mat-typography">
+    <form>
+        <mat-form-field>
+            <input
+              matInput
+              placeholder="Name"
+              name="Name"
+              required
+              [(ngModel)]="accountEdit.name"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              placeholder="Email"
+              name="Email"
+              required
+              [(ngModel)]="accountEdit.email"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              matInput
+              type="number"
+              placeholder="Age"
+              name="age"
+              required
+              [(ngModel)]="accountEdit.age"
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              type="password"
+              matInput
+              placeholder="Password"
+              name="password"
+              required
+              [(ngModel)]="accountEdit.password"
+            />
+          </mat-form-field>
+
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="accountEdit" cdkFocusInitial>Save</button>
+</mat-dialog-actions>

@@ -23,7 +23,7 @@ import { MoreInfoComponent } from './components/more-info/more-info.component';
 import { CreateAccountComponent } from './components/create-account/create-account.component';
 import { ClienteMenuComponent } from './components/cliente-menu/cliente-menu.component'
 import { TicketsComponent } from './components/tickets/tickets.component'
-
+import { DialogContentExampleDialog } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,8 @@ import { TicketsComponent } from './components/tickets/tickets.component'
     MoreInfoComponent,
     CreateAccountComponent,
     ClienteMenuComponent,
-    TicketsComponent
+    TicketsComponent,
+    DialogContentExampleDialog
   ],
   imports: [
     BrowserModule,

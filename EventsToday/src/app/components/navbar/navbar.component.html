@@ -9,6 +9,7 @@
     <div class="spacer"></div>
     <a>{{ name }}</a>
     <a mat-button [routerLink]="['tickets']">My tickets</a>
+    <a mat-raised-button (click)="openDialog()">Edit Account</a>
     <a mat-raised-button (click)="toHome()">LogOut</a>
   </mat-toolbar>
 </div>
