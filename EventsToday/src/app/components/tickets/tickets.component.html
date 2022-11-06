@@ -4,7 +4,7 @@
     <mat-grid-tile *ngFor="let ticket of tickets">
       <mat-card>
         <mat-card-header>
-          <mat-card-title>{{ this.eventname?.title }}</mat-card-title>
+          <mat-card-title>{{ ticket.title }}</mat-card-title>
           <mat-card-title>Event ID: {{ ticket.id }}</mat-card-title>
         </mat-card-header>
         <img class="main-image" src="../../../assets/qr.png" alt="title" />

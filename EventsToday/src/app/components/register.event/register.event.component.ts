@@ -25,7 +25,7 @@ export class RegisterEventComponent implements OnInit {
     price: ['', Validators.required], 
     description: '',
     author: '',
-    urlImage: '',
+    urlImg: '',
 
   });
 

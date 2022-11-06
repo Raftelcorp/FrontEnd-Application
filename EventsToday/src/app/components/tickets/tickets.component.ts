@@ -38,6 +38,7 @@ export class TicketsComponent implements OnInit {
       this.eventname=response;
     
     })
+    return this.eventname;
   }
   getUser(id:any){
 

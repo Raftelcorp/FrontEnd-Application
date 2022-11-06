@@ -11,7 +11,7 @@ export class EventApiService {
      
   }
   url="http://localhost:8080/api/events";
-  GetallUsers(){ 
+  GetallEvents(){ 
       return this.http.get(this.url);
 
   }
