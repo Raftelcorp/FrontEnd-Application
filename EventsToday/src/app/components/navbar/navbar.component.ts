@@ -43,7 +43,7 @@ export class NavbarComponent implements OnInit {
 export class DialogContentExampleDialog {
   accountEdit:Account;
   user:any;
-  constructor(private userapiService:UserapiService){
+  constructor(private userapiService:UserapiService,private route:ActivatedRoute,private router:Router){
     this.accountEdit={}as Account;
   }
   setUser(user:any){
@@ -54,7 +54,15 @@ export class DialogContentExampleDialog {
     this.userapiService.editUser(this.user.id, this.user).subscribe(response=>{
     
    });
+   this.resetPage();
   }
+
+  resetPage(){
+  
+    window.location.reload();
+   
+  }
+
  
 
 }
