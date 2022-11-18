@@ -27,6 +27,11 @@ export class TicketsComponent implements OnInit {
     this.getUser(this.id);
 
   }
+  deleteTicket(id:any){
+    this.ticketApiService.delete(id);
+    console.log(typeof(id));
+    alert("Ticket deleted");
+  }
   getAllTickets(){
     this.tickets= this.ticketApiService.getByUserId(this.id);
     console.log(this.tickets);
