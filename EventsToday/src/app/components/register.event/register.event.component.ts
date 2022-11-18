@@ -56,13 +56,15 @@ onSubmit(): void {
     }
     this.saveData();
     this.checkoutForm.reset();
-   this._location.back();
+   //this._location.back();
+
 
   }
   saveData(){
     this.event.saveEvent(this.id,this.checkoutForm.value).subscribe((result)=> {
       console.log(result);
     });
+    this.router.navigate(['/client.menu',this.id],{relativeTo: this.route});
   }
 
   resetPage(){

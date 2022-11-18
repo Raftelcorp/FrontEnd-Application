@@ -35,7 +35,8 @@ export class TicketapiService {
 
   }
   delete(id:any) : Observable<any> {
-    return this.http.delete(`${this.url}/${id}`);
+    console.log(this.url+ `/${id}`)
+    return this.http.delete(this.url+ `/${id}`);
   }
   saveTicket(userId:any,eventId:any, data:any) : Observable<any>{
     console.log("saving ticket");

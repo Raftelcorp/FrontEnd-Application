@@ -28,8 +28,11 @@ export class TicketsComponent implements OnInit {
 
   }
   deleteTicket(id:any){
-    this.ticketApiService.delete(id);
-    console.log(typeof(id));
+    console.log("deleteTicket")
+    this.ticketApiService.delete(id).subscribe(resp=>{
+      console.log(resp)
+    });
+   // console.log(id);
     alert("Ticket deleted");
   }
   getAllTickets(){
