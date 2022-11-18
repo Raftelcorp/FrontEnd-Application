@@ -13,6 +13,7 @@
             <b>Id de usuario:</b>
             {{ user.id }}
           </p>
+          <a mat-button (click)="deleteTicket(ticket.id)">Cancel Ticket</a>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
