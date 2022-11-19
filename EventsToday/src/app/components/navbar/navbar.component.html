@@ -1,15 +1,27 @@
+
 <div>
-  <mat-toolbar>
-    <span>
-      <mat-icon>group</mat-icon>
-      Events Today
-    </span>
-    <a mat-button (click)="toHome()">Home</a>
-    <a mat-button routerLink="./register.event">Publish Event</a>
-    <div class="spacer"></div>
-    <a>{{ name }}</a>
-    <a mat-button [routerLink]="['tickets']">My tickets</a>
-    <a mat-raised-button (click)="openDialog()">Edit Account</a>
-    <a mat-raised-button routerLink="/">LogOut</a>
-  </mat-toolbar>
+  <nav class="navbar navbar-expand-sm bg-#6557ff navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" (click)="toHome()">EventsToday</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="./register.event">Publish Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['tickets']">My tickets</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" (click)="openDialog()">Edit Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/">Log Out</a>
+          </li>      
+        </ul>
+      </div>
+    </div>
+  </nav>
 </div>
