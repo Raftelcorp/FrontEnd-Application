@@ -64,3 +64,24 @@ button{
   background-color: #6557ff; 
       color: white; 
 }
+
+.imagefeatured{
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+   margin: auto 
+}
+
+.carouse{
+  text-align: center;
+}
+
+.carousel-control-prev{
+ 
+  margin: auto 
+}
+
+.carousel-control-next{
+ 
+  margin: auto 
+}

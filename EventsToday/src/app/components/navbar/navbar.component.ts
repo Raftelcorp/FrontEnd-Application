@@ -4,17 +4,20 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import { Account } from 'src/app/model/account';
+import { TokenService } from 'src/app/service/token.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+  isAdmin = false;
+  roles: string[]=[];
   name:string;
   account:Account;
   userId:any;
   user:any;
-  constructor(public dialog: MatDialog,private userapiService:UserapiService,private route:ActivatedRoute,private router:Router) {
+  constructor(public dialog: MatDialog,private userapiService:UserapiService,private route:ActivatedRoute,private router:Router, private tokenService:TokenService) {
     this.name="";
     this.account={} as Account;
   }
@@ -26,7 +29,15 @@ export class NavbarComponent implements OnInit {
       this.user=response;
       console.log("obteniendo nombre: ");
       console.log(this.name);
-    })
+    });
+
+    this.roles = this.tokenService.getAuthorities();
+    this.roles.forEach(rol => {
+      if (rol === 'ROLE_ADMIN') {
+        this.isAdmin = true;
+      }
+    });
+    console.log( this.isAdmin);
   }
   toHome(){
     this.router.navigate(['./'],{relativeTo: this.route});

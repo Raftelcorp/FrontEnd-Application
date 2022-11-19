@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -11,6 +11,14 @@ export class TicketapiService {
      
   }
   url="http://localhost:8080/api/tickets";
+
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    })
+  }
+
+  
   getallTickets(id:any) : Observable<any>{ 
       return this.http.get(this.url+ `/${id}`);
 

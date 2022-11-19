@@ -9,6 +9,16 @@
           name="Name"
           required
           [(ngModel)]="accountData.name"
+          [(ngModel)]="accountAuthData.name"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Username"
+          name="Username"
+          required
+          [(ngModel)]="accountAuthData.userName"
         />
       </mat-form-field>
       <mat-form-field>
@@ -18,6 +28,7 @@
           name="Email"
           required
           [(ngModel)]="accountData.email"
+          [(ngModel)]="accountAuthData.email"
         />
       </mat-form-field>
       <mat-form-field>
@@ -38,6 +49,7 @@
           name="password"
           required
           [(ngModel)]="accountData.password"
+          [(ngModel)]="accountAuthData.password"
         />
       </mat-form-field>
       <ng-container>

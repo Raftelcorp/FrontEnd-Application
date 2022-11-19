@@ -1,0 +1,48 @@
+<div class="main">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-content>
+        <img src="../../../assets/logo.png" />
+        <form (ngSubmit)="onLogin()" [formGroup]="form" autocomplete="off">
+          <mat-card class="form-container">
+            <mat-card-title>Login</mat-card-title>
+            <div>
+              <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input
+                  matInput
+                  type="text"
+                  placeholder="Ex. upcdaos"
+                  formControlName="userName"
+                />
+              </mat-form-field>
+            </div>
+            <div>
+              <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input
+                  matInput
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Ex.57887$$"
+                  formControlName="password"
+                />
+              </mat-form-field>
+            </div>
+            <div>
+              <button type="submit" mat-raised-button color="primary">
+                Login
+              </button>
+            </div>
+          </mat-card>
+        </form>
+
+        <hr />
+        <button mat-button class="create-button" routerLink="/create-account">
+          CREATE ACCOUNT
+        </button>
+      </mat-card-content>
+    </mat-card-header>
+  </mat-card>
+</div>

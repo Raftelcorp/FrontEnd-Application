@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
@@ -12,6 +12,13 @@ import { Observable } from 'rxjs';
        
     }
     url="http://localhost:8080/api/customers";
+
+    httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+      })
+    }
+  
     
     GetallUsers() : Observable<any>{ 
         return this.http.get(this.url);
@@ -20,18 +27,22 @@ import { Observable } from 'rxjs';
   
     GetById(id:any) : Observable<any>{
       console.log("getting");
-      return this.http.get<any>(`${this.url}/${id}`);
+      return this.http.get<any>(`${this.url}/${id}`, this.httpOptions);
+    }
+    GetByEmail(email:any) : Observable<any>{
+      console.log("getting");
+      return this.http.get<any>(`${this.url}/searchByEmail/${email}`, this.httpOptions);
     }
     editUser(id:any,data:any){
       console.log("editing")
       console.log(data);
-      return this.http.patch(`${this.url}/${id}`,data);
+      return this.http.patch(`${this.url}/${id}`,data, this.httpOptions);
     }
     saveUser(data:any): Observable<any>{
       console.log("saving");
-      console.log(data);
+      console.log(`${this.url}`,data, this.httpOptions);
   
-      return this.http.post(this.url, data);
+      return this.http.post(this.url, data, this.httpOptions);
     }
     logIn(data:any){
       this.http.get<any>(this.url).subscribe(

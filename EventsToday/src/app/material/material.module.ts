@@ -8,6 +8,9 @@ import { MatInputModule }  from '@angular/material/input';
 
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatSortModule } from '@angular/material/sort';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [ ],
@@ -20,6 +23,9 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatTableModule,
     MatCardModule,
+    MatSortModule,
+    MatTabsModule,
+    MatToolbarModule
 ]
  
 })

@@ -1,0 +1,87 @@
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+    font-family: arial;
+  }
+  
+  .column2 {
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }    
+  
+  .left, .right {
+    width: 25%;
+    background: whitesmoke;
+  }
+  
+  .middle {
+    width: 50%;
+    background: lightblue;
+  }
+  
+  img{
+    max-width: 100%;
+    height: auto;
+  }
+  h1{
+    padding: 50px;
+  
+  }
+      
+  
+  .main {
+  
+    margin: 0 auto;
+  }
+  
+  .mat-card{
+    max-width: 50%;
+  }
+  .main-image{
+  
+    max-width: 80%;
+  }
+  
+  p{
+    text-align: start;
+  }
+  .mat-grid-tile{
+    text-align: center;
+  }
+  
+  .moreinfo-button{
+    background-color: #5b164d ;
+    color: white;
+  }
+  
+  button{
+    background-color: #6557ff; 
+        color: white; 
+  }
+  
+  .imagefeatured{
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+     margin: auto 
+  }
+  
+  .carouse{
+    text-align: center;
+  }
+  
+  .carousel-control-prev{
+   
+    margin: auto 
+  }
+  
+  .carousel-control-next{
+   
+    margin: auto 
+  }

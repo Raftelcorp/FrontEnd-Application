@@ -1,0 +1,31 @@
+img{
+  position: relative;
+  top: 150px;
+  left: 300px;
+  max-width: 500px;
+}
+.title1{
+  font-family: "Century Gothic";
+  position: relative;
+  left: 300px;
+  top: 150px;
+}
+.title2{
+  font-family: "Century Gothic";
+  position: relative;
+  left: 300px;
+  top: 150px;
+}
+.title3{
+  font-family: "Century Gothic";
+}
+.Text{
+  font-family: "Century Gothic";
+}
+.part2{
+  position: relative;
+  left:1000px;
+  top:-80px;
+  text-align: justify;
+  width: 500px;
+}
