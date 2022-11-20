@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import {MatDialog} from '@angular/material/dialog';
 import { Account } from 'src/app/model/account';
+import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
 @Component({
   selector: 'app-navbar',
@@ -42,9 +43,9 @@ export class NavbarComponent implements OnInit {
   toHome(){
     this.router.navigate(['./'],{relativeTo: this.route});
    }
-   openDialog(){
+   openDialog(email:any){
     let dialogRef = this.dialog.open(  DialogContentExampleDialog);
-    dialogRef.componentInstance.setUser(this.user)
+    dialogRef.componentInstance.setUser(this.user,email )
    }
 
    onLogOut(): void{
@@ -61,18 +62,34 @@ export class NavbarComponent implements OnInit {
 export class DialogContentExampleDialog {
   accountEdit:Account;
   user:any;
-  constructor(private userapiService:UserapiService,private route:ActivatedRoute,private router:Router){
+  email:any;
+  constructor(private userapiService:UserapiService,private route:ActivatedRoute,private router:Router, private authUserService:AuthService ){
     this.accountEdit={}as Account;
   }
-  setUser(user:any){
+  setUser(user:any, email:any){
     this.user = user;
+    this.email = email;
+    console.log(this.user)
+    console.log(this.email)
   }
 
   updateUser(){
+    let newU ={
+
+      "name": "",
+      "email": "",
+     }
+     newU.name = this.user.name;
+     newU.email = this.user.email;
+     console.log(this.user)
+     console.log(this.email)
+    this.authUserService.editUser(this.email, newU ).subscribe(response=>{
+      
+    });
     this.userapiService.editUser(this.user.id, this.user).subscribe(response=>{
     
    });
-   this.resetPage();
+  // this.resetPage();
   }
 
   resetPage(){

@@ -33,7 +33,7 @@
           <button mat-button (click)="goToUserTickets(user.id)">
             <mat-icon>local_play</mat-icon>
           </button>
-          <button mat-button (click)="openDialog(user.id)">
+          <button mat-button (click)="openDialog(user.id, user.email)">
             <mat-icon>edit</mat-icon>
           </button>
           <button mat-button (click)="deleteCustomer(user.id)">

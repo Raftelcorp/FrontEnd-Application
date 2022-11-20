@@ -19,7 +19,9 @@
             <a class="nav-link" [routerLink]="['tickets']">My tickets</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" (click)="openDialog()">Edit Account</a>
+            <a class="nav-link" (click)="openDialog(user.email)"
+              >Edit Account</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link" (click)="onLogOut()" routerLink="/">Log Out</a>

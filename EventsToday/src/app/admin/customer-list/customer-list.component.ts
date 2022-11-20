@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UserapiService } from 'src/app/service/userapi.service'; 
+import { AuthService } from 'src/app/service/auth.service';
 import { Account } from 'src/app/model/account';
 import {MatDialog} from '@angular/material/dialog';
 import { Ticket } from 'src/app/model/ticket';
@@ -69,10 +70,10 @@ export class CustomerListComponent implements OnInit {
     this.router.navigate(['../ticket-list',id],{relativeTo: this.route});
   }
 
-  openDialog(id:any){
+  openDialog(id:any, email:any){
     let dialogRef = this.dialog.open( DialogContentAdmin);
     this.customerService.GetById(id).subscribe((resp)=>{
-      dialogRef.componentInstance.setUser(resp)
+      dialogRef.componentInstance.setUser(resp, email)
     })
   
    }
@@ -86,18 +87,36 @@ export class CustomerListComponent implements OnInit {
 export class DialogContentAdmin {
   accountEdit:Account;
   user:any;
-  constructor(private userapiService:UserapiService,private route:ActivatedRoute,private router:Router){
+  email:any;
+  constructor(private userapiService:UserapiService,private route:ActivatedRoute,private router:Router, private authUserService:AuthService){
     this.accountEdit={}as Account;
   }
-  setUser(user:any){
+  setUser(user:any, email:any){
     this.user = user;
+    this.email = email;
   }
 
   updateUser(){
+
+    let newU ={
+
+      "name": "",
+      "email": "",
+     }
+     newU.name = this.user.name;
+     newU.email = this.user.email;
+     console.log(this.user)
+     console.log(this.email)
+    this.authUserService.editUser(this.email, newU ).subscribe(response=>{
+      
+    });
+
     this.userapiService.editUser(this.user.id, this.user).subscribe(response=>{
     
    });
-   this.resetPage();
+
+  
+  // this.resetPage();
   }
 
   resetPage(){

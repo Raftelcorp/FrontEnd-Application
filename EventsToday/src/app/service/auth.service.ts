@@ -27,6 +27,10 @@ import { JwtDTO } from '../model/jwt-dto';
     public getUserByUsername(username: String): Observable<any> {
         return this.httpClient.get<any>(this.authURL + 'get/' + username);
       }
+
+    public editUser(id:any , newUser:any): Observable<any> {
+        return this.httpClient.patch<any>(this.authURL + id , newUser);
+      }
   }
 
 
