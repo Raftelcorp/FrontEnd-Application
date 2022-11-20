@@ -56,4 +56,13 @@ export class CustomerListComponent implements OnInit {
    
   } 
 
+  deleteCustomer(id:any){
+    this.customerService.delete(id).subscribe(response => {
+      });
+
+      //this.resetPage();
+  }
+  goToUserTickets(id:any){
+    this.router.navigate(['../ticket-list',id],{relativeTo: this.route});
+  }
 }

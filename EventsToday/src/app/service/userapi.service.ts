@@ -44,6 +44,10 @@ import { Observable } from 'rxjs';
   
       return this.http.post(this.url, data, this.httpOptions);
     }
+    delete(id:any) : Observable<any> {
+      console.log(this.url+ `/${id}`)
+      return this.http.delete(this.url+ `/${id}`);
+    }
     logIn(data:any){
       this.http.get<any>(this.url).subscribe(
         response=>{

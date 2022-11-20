@@ -29,6 +29,7 @@ import { LoginAuthComponent } from './auth/login-auth/login-auth.component';
 import { interceptorProvider } from './interceptors/prod-interceptor.service';
 import { CustomerListComponent } from './admin/customer-list/customer-list.component';
 import { EventListComponent } from './admin/event-list/event-list.component';
+import { TicketListComponent } from './admin/ticket-list/ticket-list.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { EventListComponent } from './admin/event-list/event-list.component';
     RegisterComponent,
     LoginAuthComponent,
     CustomerListComponent,
-    EventListComponent
+    EventListComponent,
+    TicketListComponent
   ],
   imports: [
     BrowserModule,

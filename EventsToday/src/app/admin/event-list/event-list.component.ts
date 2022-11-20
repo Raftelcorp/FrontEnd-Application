@@ -59,5 +59,10 @@ export class EventListComponent implements OnInit {
     })
   } 
 
+  deleteEvent(id:any){
+    this.service.delete(id).subscribe(response => {
+    });
+  }
+
 
 }

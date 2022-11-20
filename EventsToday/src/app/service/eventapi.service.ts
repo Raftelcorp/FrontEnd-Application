@@ -34,4 +34,9 @@ export class EventApiService {
 
     return this.http.post(this.url+ `/${id}`, data,  this.httpOptions);
   }
+
+  delete(id:any) : Observable<any> {
+    console.log(this.url+ `/${id}`)
+    return this.http.delete(this.url+ `/${id}`);
+  }
 }

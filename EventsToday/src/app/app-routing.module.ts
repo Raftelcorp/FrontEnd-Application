@@ -14,6 +14,7 @@ import { LoginAuthComponent } from './auth/login-auth/login-auth.component';
 import { CustomerListComponent } from './admin/customer-list/customer-list.component';
 import { ProdGuardService as guard } from './guards/prod-guard.service';
 import { EventListComponent } from './admin/event-list/event-list.component';
+import { TicketListComponent } from './admin/ticket-list/ticket-list.component';
 
 export const routingConfiguration: ExtraOptions = {
   paramsInheritanceStrategy: 'always'
@@ -32,8 +33,9 @@ const routes: Routes = [
     {path:'register.event',component:RegisterEventComponent},
     {path:'password.change',component:PasswordChangeComponent},
     {path:'account.recovery',component:AccountRecoveryComponent},
-    { path: 'customer-list', component: CustomerListComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+    { path: 'customer-list', component: CustomerListComponent, canActivate: [guard], data: { expectedRol: ['admin'] }},
     { path: 'event-list', component: EventListComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
+    { path: 'ticket-list/:userId', component: TicketListComponent, canActivate: [guard], data: { expectedRol: ['admin'] } },
   
     {path:'tickets',component:TicketsComponent}
   ]},
