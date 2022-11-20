@@ -25,26 +25,26 @@
     <div class="carouse">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <a (click)="moveToInfo(events.at(1)?.id)"
+          <a (click)="moveToInfo(events[0]?.id)"
             ><img
               class="imagefeatured"
-              src="{{ events.at(1)?.urlImg }}"
+              src="{{ events[0]?.urlImg }}"
               alt="featured"
           /></a>
         </div>
         <div class="carousel-item">
-          <a (click)="moveToInfo(events.at(2)?.id)"
+          <a (click)="moveToInfo(events[1]?.id)"
             ><img
               class="imagefeatured"
-              src="{{ events.at(2)?.urlImg }}"
+              src="{{ events[1]?.urlImg }}"
               alt="featured"
           /></a>
         </div>
         <div class="carousel-item">
-          <a (click)="moveToInfo(events.at(3)?.id)"
+          <a (click)="moveToInfo(events[2].id)"
             ><img
               class="imagefeatured"
-              src="{{ events.at(3)?.urlImg }}"
+              src="{{ events[2]?.urlImg }}"
               alt="featured"
           /></a>
         </div>
