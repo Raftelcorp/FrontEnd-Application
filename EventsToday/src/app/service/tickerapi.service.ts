@@ -10,7 +10,8 @@ export class TicketapiService {
   constructor(private http:HttpClient) { 
      
   }
-  url="http://localhost:8080/api/tickets";
+  url= 'https://events-today.herokuapp.com/api/tickets'
+ // url="http://localhost:8080/api/tickets";
 
   httpOptions = {
     headers: new HttpHeaders({

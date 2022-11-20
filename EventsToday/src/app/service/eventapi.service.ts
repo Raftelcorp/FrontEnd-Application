@@ -10,7 +10,8 @@ export class EventApiService {
   constructor(private http:HttpClient) { 
      
   }
-  url="http://localhost:8080/api/events";
+  url= 'https://events-today.herokuapp.com/api/events'
+  //url="http://localhost:8080/api/events";
 
   httpOptions = {
     headers: new HttpHeaders({
