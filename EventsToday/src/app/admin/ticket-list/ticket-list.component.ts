@@ -32,7 +32,7 @@ export class TicketListComponent implements OnInit {
       console.log(resp)
     });
    // console.log(id);
-    alert("Ticket deleted");
+   // alert("Ticket deleted");
   }
   getAllTickets(){
     this.tickets= this.ticketApiService.getByUserId(this.id);

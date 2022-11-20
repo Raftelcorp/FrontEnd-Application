@@ -46,6 +46,13 @@ export class NavbarComponent implements OnInit {
     let dialogRef = this.dialog.open(  DialogContentExampleDialog);
     dialogRef.componentInstance.setUser(this.user)
    }
+
+   onLogOut(): void{
+    this.tokenService.logOut();
+    this.router.navigate(['/login'],{relativeTo: this.route});
+   // window.location.reload();
+  }
+
 }
 @Component({
   selector: 'edit-account-dialog',
@@ -73,6 +80,8 @@ export class DialogContentExampleDialog {
     window.location.reload();
    
   }
+
+
 
  
 

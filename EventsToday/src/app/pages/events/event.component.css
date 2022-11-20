@@ -34,7 +34,6 @@ h1{
 
 }
     
-
 .main {
 
   margin: 0 auto;
@@ -67,9 +66,10 @@ button{
 
 .imagefeatured{
   width: 50%;
+  max-height: 500px;
   justify-content: center;
   text-align: center;
-   margin: auto 
+
 }
 
 .carouse{

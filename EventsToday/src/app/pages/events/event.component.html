@@ -29,8 +29,7 @@
             ><img
               class="imagefeatured"
               src="{{ events.at(1)?.urlImg }}"
-              alt="Los Angeles"
-              class="d-block"
+              alt="featured"
           /></a>
         </div>
         <div class="carousel-item">
@@ -38,17 +37,15 @@
             ><img
               class="imagefeatured"
               src="{{ events.at(2)?.urlImg }}"
-              alt="Chicago"
-              class="d-block"
+              alt="featured"
           /></a>
         </div>
         <div class="carousel-item">
-          <a (click)="moveToInfo(events.at(2)?.id)"
+          <a (click)="moveToInfo(events.at(3)?.id)"
             ><img
               class="imagefeatured"
-              src="{{ events.at(2)?.urlImg }}"
-              alt="New York"
-              class="d-block"
+              src="{{ events.at(3)?.urlImg }}"
+              alt="featured"
           /></a>
         </div>
       </div>
