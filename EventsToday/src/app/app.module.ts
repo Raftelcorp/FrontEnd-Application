@@ -24,6 +24,7 @@ import { CreateAccountComponent } from './pages/create-account/create-account.co
 import { ClienteMenuComponent } from './components/cliente-menu/cliente-menu.component'
 import { TicketsComponent } from './pages/tickets/tickets.component'
 import { DialogContentExampleDialog } from './components/navbar/navbar.component';
+import { DialogContentAdmin } from './admin/customer-list/customer-list.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginAuthComponent } from './auth/login-auth/login-auth.component';
 import { interceptorProvider } from './interceptors/prod-interceptor.service';
@@ -45,6 +46,7 @@ import { TicketListComponent } from './admin/ticket-list/ticket-list.component';
     ClienteMenuComponent,
     TicketsComponent,
     DialogContentExampleDialog,
+    DialogContentAdmin,
     RegisterComponent,
     LoginAuthComponent,
     CustomerListComponent,

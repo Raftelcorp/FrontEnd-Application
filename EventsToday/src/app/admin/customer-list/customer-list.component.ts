@@ -1,10 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 import { EventApiService } from 'src/app/service/eventapi.service'; 
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UserapiService } from 'src/app/service/userapi.service'; 
+import { Account } from 'src/app/model/account';
+import {MatDialog} from '@angular/material/dialog';
 import { Ticket } from 'src/app/model/ticket';
 @Component({
   selector: 'app-customer-list',
@@ -15,7 +16,7 @@ export class CustomerListComponent implements OnInit {
 
   @Input() userId:any;
   ticket:Ticket;
-  constructor (private customerService:UserapiService, private service:EventApiService, private router:Router, private route:ActivatedRoute,private formBuilder:FormBuilder) { 
+  constructor (public dialog:MatDialog, private customerService:UserapiService, private service:EventApiService, private router:Router, private route:ActivatedRoute,private formBuilder:FormBuilder) { 
     this.ticket={} as Ticket;
   };
 
@@ -30,7 +31,9 @@ export class CustomerListComponent implements OnInit {
     }
   }
 
+  user:any;
   users:any;
+  customerId:any;
   Getallusers(){
     this.customerService.GetallUsers().subscribe(response => {
     this.users = response;
@@ -65,4 +68,46 @@ export class CustomerListComponent implements OnInit {
   goToUserTickets(id:any){
     this.router.navigate(['../ticket-list',id],{relativeTo: this.route});
   }
+
+  openDialog(id:any){
+    let dialogRef = this.dialog.open( DialogContentAdmin);
+    this.customerService.GetById(id).subscribe((resp)=>{
+      dialogRef.componentInstance.setUser(resp)
+    })
+  
+   }
+
+
+}
+@Component({
+  selector: 'edit-customer-dialog',
+  templateUrl: 'edit-customer-dialog.html',
+})
+export class DialogContentAdmin {
+  accountEdit:Account;
+  user:any;
+  constructor(private userapiService:UserapiService,private route:ActivatedRoute,private router:Router){
+    this.accountEdit={}as Account;
+  }
+  setUser(user:any){
+    this.user = user;
+  }
+
+  updateUser(){
+    this.userapiService.editUser(this.user.id, this.user).subscribe(response=>{
+    
+   });
+   this.resetPage();
+  }
+
+  resetPage(){
+  
+    window.location.reload();
+   
+  }
+
+
+
+ 
+
 }
