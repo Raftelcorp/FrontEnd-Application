@@ -4,16 +4,16 @@
     <mat-grid-tile *ngFor="let ticket of tickets">
       <mat-card>
         <mat-card-header>
-          <mat-card-title>{{ ticket.title }}</mat-card-title>
-          <mat-card-title>Event ID: {{ ticket.id }}</mat-card-title>
+          <mat-card-title>{{ ticket.eventId.title }}</mat-card-title>
+          <mat-card-title>Ticket ID: {{ ticket.id }}</mat-card-title>
+          <mat-card-title>Event ID: {{ ticket.eventId.id }}</mat-card-title>
         </mat-card-header>
         <img class="main-image" src="../../../assets/qr.png" alt="title" />
         <mat-card-content>
           <p>
             <b>Id de usuario:</b>
-            {{ user.id }}
+            {{ ticket.ownerId.id }}
           </p>
-          <a mat-button (click)="deleteTicket(ticket.id)">Cancel Ticket</a>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
