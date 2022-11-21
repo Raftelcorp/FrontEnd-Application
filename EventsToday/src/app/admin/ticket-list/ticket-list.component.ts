@@ -22,7 +22,7 @@ export class TicketListComponent implements OnInit {
     this.id = this.activateRoute.snapshot.paramMap.get('userId'); 
     console.log("id desde el hijo:", this.id);
     this.getAllTickets();
-    this.getEventName(this.id);
+   // this.eventname = this.getEventName();
     this.getUser(this.id);
 
   }
@@ -38,15 +38,7 @@ export class TicketListComponent implements OnInit {
     this.tickets= this.ticketApiService.getByUserId(this.id);
     console.log(this.tickets);
   }
-  getEventName(id:any){
-
-    this.eventApiSerice.GetById(id).subscribe(response=>{
-     
-      this.eventname=response;
-    
-    })
-    return this.eventname;
-  }
+ 
   getUser(id:any){
 
     this.userApiService.GetById(id).subscribe(response=>{

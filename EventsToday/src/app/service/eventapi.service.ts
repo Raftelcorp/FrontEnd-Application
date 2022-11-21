@@ -19,10 +19,11 @@ export class EventApiService {
     })
   }
 
-  GetallEvents(){ 
+  GetallEvents() : Observable<any>{ 
       return this.http.get(this.url , this.httpOptions);
 
   }
+
 
   GetById(id:any): Observable<any>{
     console.log("getting");

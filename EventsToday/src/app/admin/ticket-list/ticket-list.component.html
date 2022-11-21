@@ -1,17 +1,18 @@
 <h1>User Tickets</h1>
 <div class="main">
   <mat-grid-list cols="3" rowHeight="1:1">
-    <mat-grid-tile *ngFor="let ticket of tickets">
+    <mat-grid-tile *ngFor="let ticket of tickets; let i = index">
       <mat-card>
         <mat-card-header>
-          <mat-card-title>{{ ticket.title }}</mat-card-title>
-          <mat-card-title>Event ID: {{ ticket.id }}</mat-card-title>
+          <mat-card-title>{{ ticket.eventId.title }}</mat-card-title>
+          <mat-card-title>Ticket ID: {{ ticket.id }}</mat-card-title>
+          <mat-card-title>Event ID: {{ ticket.eventId.id }}</mat-card-title>
         </mat-card-header>
         <img class="main-image" src="../../../assets/qr.png" alt="title" />
         <mat-card-content>
           <p>
             <b>Id de usuario:</b>
-            {{ user.id }}
+            {{ ticket.ownerId.id }}
           </p>
         </mat-card-content>
         <mat-card-actions>
